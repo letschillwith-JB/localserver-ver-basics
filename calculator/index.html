@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body > h1{
+            text-align: center;
+            color: rgb(66, 134, 134);
+        }
+        body > div{
+            width: 25%;
+            height: 380px;
+            margin: auto;
+            padding-top: 5px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .maindiv>div:nth-child(1) {
+            width: 70%;
+            height: 60px;
+            margin: auto;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
+            margin-top: 20px;
+             ;
+        }
+        .div{
+            display: grid;
+            grid-template-columns: repeat(4,1fr) ;
+            grid-template-rows: repeat(4,1fr);
+            gap: 12px;
+            border: ;
+            width: 70%;
+            height: 220px;
+            margin: auto;
+            margin-top: 40px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .div > div{
+            border-radius: 7px;
+            background-color:white;
+            text-align: center;
+             padding-top: 15px;
+             font-weight: bolder;
+            font-size: large;
+             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        
+            }
+        .div > div:hover{
+            background-color: darkgray;
+        }
+        #exept-div{
+            color: white;
+            background-color: black;
+        }
+        #exept-div:hover{
+            background-color: darkgrey;
+            color: black;
+        }
+        #exept-div1{
+            color: white;
+            background-color: red;
+        }
+        #exept-div1:hover{
+            background-color: darkgray;
+            color: black;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1 >Masai Calculator</h1>
+    <div class="maindiv" >
+        <div></div>
+        <div class="div">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div id="exept-div">+</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div id="exept-div">-</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div id="exept-div">*</div>
+            <div id="exept-div1">C</div>
+            <div>0</div>
+            <div id="exept-div">/</div>
+            <div id="exept-div">=</div>
+            
+        </div>
+    </div>
+</body>
+</html>

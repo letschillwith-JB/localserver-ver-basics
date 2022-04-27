@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understand the need of stringify & parse</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>    
+//no1 thing agar setItem kar diya hai toh getItem karna hi padega
+//let compare bw 1 nd 2
+// 1-->> var arr = [1,2,3,4,5]; and console it                      -->output will be in an object
+
+// 2-->> var arr = [1,2,3,4,5]; and do JSON.stringify & JSON.parse()-->output will be in an object form only 
+
+// yet in both output remain same but in 2nd one we are adding data to local storage which is our objective
+//  ... point is why there is a need of doing stringify and parse so see what happens without it
+//  -->just doing stringify and not parse
+    // var arr = [1,2,3,4,5]
+    // var data =localStorage.setItem("key",JSON.stringify(arr)) 
+    // console.log(localStorage.getItem("key"))
+
+    //output yu can see its just an array and not an object so for getting obj do parse()
+
+ //  -->so doing stringify and parse
+    var arr = [1,2,3,4,5]
+    var data =localStorage.setItem("key",JSON.stringify(arr)) 
+    console.log(JSON.parse(localStorage.getItem("key")))
+
+
+    // var arr = [2,5,3,7]
+    // // var ls = localStorage.setItem("data",JSON.stringify(arr) )
+    // // console.log(JSON.parse(localStorage.getItem("data")))
+    // console.log(arr)    
+
+      
+    
+    
+</script>

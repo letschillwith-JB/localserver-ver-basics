@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query 4</title>
+    <style>
+        #cont{
+            margin: auto;
+            width: 80%;
+            height: 500px;
+        }
+        #cont2{
+            width: 100%;
+            height: 500px;
+            display: flex;
+            justify-content:space-between;
+        }
+        .nav{
+            background-color: yellow;
+            width: 100%;
+            height: 10%;
+            font-size: xx-large;
+            padding: 20px 0px 0px 20px;
+        }
+        .lb{
+            background-color: red;
+            width: 45%;
+            height: 75%;
+            margin-top: 10px;
+            padding: 10px 0px 0px 10px;
+            display: flex;
+        }
+        .rb{
+            background-color: lightgreen;
+            width: 45%;
+            height: 75%;
+            margin-top: 10px;
+            padding: 10px 0px 0px 10px;
+        }
+
+        @media all and (min-width:200px) and (max-width:450px){
+            #cont{
+            margin: auto;
+            width: 80%;
+            height: 500px;
+            display: block;
+        }
+        #cont2{
+            width: 100%;
+            height: 400px;
+            display: block;
+            
+        }
+        .nav{
+            background-color: yellow;
+            width: 100%;
+            height: 10%;
+            font-size: xx-large;
+            padding: 20px 0px 0px 20px;
+        }
+        .lb{
+            background-color: red;
+            width: 100%;
+            height: 50%;
+            margin-top: 10px;
+            padding: 10px 0px 0px 10px;
+            display: flex;
+        }
+        .rb{
+            background-color: lightgreen;
+            width: 100%;
+            height: 50%;
+            margin-top: 10px;
+            padding: 10px 0px 0px 10px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="cont">
+        <div class="nav">Navigation</div>
+        <div id="cont2">
+            <div class="lb">LEFT BOX</div>
+            <div class="rb">RIGHT BOX</div>
+        </div>
+    </div>
+</body>
+</html>

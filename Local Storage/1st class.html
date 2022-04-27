@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introduction to localStorage</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // localStorage.setItem("mobile",9988776622)
+
+    // // strings
+    // localStorage.setItem("name","JB")
+     
+    //  var student = "ram"
+    //  localStorage.setItem("name",student)
+
+    //  //getItem - localStrorage.getItem("key")
+    // var getmobile = localStorage.getItem("mobile")
+    // console.log(getmobile)
+
+    // //whenever you are trying to access which is not defined in local system then it will return null 
+    // //array
+    // var number = [1,2,3,4,5]
+    // localStorage.setItem("luckyNumber",number)
+    // //type of number will sring and not array in localstorage
+    // //
+    // //JSON methods
+    // //JSON.stringify() ---- for keeping array into array form
+    // localStorage.setItem("luckyNumber",JSON.stringify(numbers))
+
+    var x = "ram"
+    localStorage.setItem("name",x)
+    console.log(typeof name)
+
+    var y = [1,2,3,4,5];
+    var y1 = [1,2,3,4,5,6]
+    localStorage.setItem("arr",y)
+    console.log(localStorage.getItem("arr")) //since output is not an array so 1st convert into array by using JSON.Stringify()
+    //now how to use JSON.stingify()-->at the time of setItem("key",keep the value inside it)
+    localStorage.setItem("arrJSON",JSON.stringify(y1))
+    console.log(localStorage.getItem("arrJSON"))
+    
+
+
+
+
+</script>

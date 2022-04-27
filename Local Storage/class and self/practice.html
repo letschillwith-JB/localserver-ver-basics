@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>how btn inc/dec count</title>
+</head>
+<body>
+    <div id="div"></div>
+    <button id="btn1">LIKE</button>
+    <button id="btn2">DISLIKE</button>
+</body>
+</html>
+<script>
+    var count = 0 
+    
+    document.querySelector("#btn1").addEventListener("click",myfun)
+    function myfun(){
+        count++
+        document.querySelector("#div").innerText = count    //there is a reason to print this div here bcz count++ is happening inside the function 
+    }
+
+    document.querySelector("#btn2").addEventListener("click",myfun2)
+    function myfun2(){
+        count--
+        document.querySelector("#div").innerText =  count
+    }
+</script>

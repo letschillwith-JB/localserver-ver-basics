@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Session Flex + Position</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Square+Peg&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        /* font-family: 'Ubuntu', sans-serif; */
+    }
+
+    .card {
+        width: 300px;
+        border: 1px solid rgb(224, 224, 224);
+        margin: auto;
+        ;
+    }
+    body{
+        position: relative;
+    }
+    .card-img {
+        width: 100%;
+    }
+
+    .footer {
+        border-top: 1px solid black;
+    }
+
+    h3,
+    p {
+        margin: 5px 0px;
+    }
+.card-text{
+    margin-top: 10px;
+    color: gray;
+}
+    .box-img {
+        width: 100%;
+        
+    }
+    .bs{
+        background-color: lightgrey;
+        width: 9%;
+        text-align: center;
+        display: inline;
+         margin-left:20px;
+         position: absolute; 
+         bottom: 150px;
+         border-radius:5px ;
+}
+.offer{
+        background-color: lightgrey;
+        width: 5%;
+        text-align: center;
+        display: inline;
+         margin-left:140px;
+         position: absolute; 
+         border-radius:5px ;
+         bottom: 150px;
+}
+.container{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    background-color: lightcyan;
+}
+</style>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="box-img">
+                <img src="https://raw.githubusercontent.com/Sourav12061999/nykaafashion/main/nykaa-clone/Kids%20Page/Images/img1.jpg"
+                    alt="" class="card-img">
+                <!-- <p>Bestseller</p> -->
+            </div>
+            <div class="bs">BESTSELLER</div>
+            <div class="offer">OFFER</div>
+            <h3 class="card-heading">Kids Dresses</h3>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nulla. </p>
+            <h3>&#8377 1800 <span style="color: grey;margin-left: 10px;" ><del>&#8377 3,000</del></span><span style="color: green;margin-left: 10px;" >40% off</span></h3>
+            <p>1-2 Years, 2-3 Years, 3-4 Years, 4-5 Years </p>
+        </div>
+        <div class="card">
+            <div class="box-img">
+                <img src="https://raw.githubusercontent.com/Sourav12061999/nykaafashion/main/nykaa-clone/Kids%20Page/Images/img2.jpg"
+                    alt="" class="card-img">
+                <!-- <p>Bestseller</p> -->
+            </div>
+            <div class="bs">EDITORS PICK</div>
+            <div class="offer">OFFER</div>
+            <h3 class="card-heading">Fancy Dresses</h3>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nulla. </p>
+            <h3>&#8377 3200 <span style="color: grey;margin-left: 10px;" ><del>&#8377 4,999</del></span><span style="color: green;margin-left: 10px;" >40% off</span></h3>
+            <p>1-2 Years, 2-3 Years, 3-4 Years, 4-5 Years </p>
+        </div>
+        <div class="card">
+            <div class="box-img">
+                <img src="https://raw.githubusercontent.com/Sourav12061999/nykaafashion/main/nykaa-clone/Kids%20Page/Images/img4.jpg"
+                    alt="" class="card-img">
+                <!-- <p>Bestseller</p> -->
+            </div>
+            <div class="bs">BESTSELLER</div>
+            <div class="offer">OFFER</div>
+            <h3 class="card-heading">Girls Party Style</h3>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, nulla. </p>
+            <h3>&#8377 2500 <span style="color: grey;margin-left: 10px;" ><del>&#8377 3,999</del></span><span style="color: green;margin-left: 10px;" >40% off</span></h3>
+            <p>1-2 Years, 2-3 Years, 3-4 Years, 4-5 Years </p>
+        </div>
+
+    </div>
+</body>
+
+</html>

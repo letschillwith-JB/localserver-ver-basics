@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query WE 2</title>
+    <style>
+#container{
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: 100px 250px;
+    gap: 30px;
+}
+.box1{
+    background-color: yellow;
+    grid-area: 1/1/2/5;
+    padding: 0px 0px 0px 20px;;
+    font-size: larger;
+}
+.box2{
+    background-color: red;
+    grid-area: 2/1/3/2;
+    padding: 20px 0px 0px 20px;
+    font-size: x-large;
+}
+.box3{
+    background-color: green;
+    grid-area: 2/2/3/3;
+    padding: 20px 0px 0px 20px;
+    font-size: x-large;
+}
+.box4{
+    background-color:lightblue;
+    grid-area: 2/3/3/4;
+    padding: 20px 0px 0px 20px;
+    font-size: x-large;
+}
+.box5{
+    background-color: gray;
+    grid-area: 2/4/3/5;
+    padding: 20px 0px 0px 20px;
+    font-size: x-large;
+}
+@media all and (min-width:450px) and (max-width:750px) {
+    #container{
+    grid-template-columns: auto auto ;
+    grid-template-rows: 100px 250px 250px;
+    gap: 30px;
+    }
+.box1{
+    grid-area: 1/1/2/3;
+}
+.box2{
+    grid-area: 2/1/3/2;
+}
+.box3{
+    grid-area: 3/1/4/2;
+}
+.box4{
+    grid-area: 2/2/3/3;
+    }
+.box5{
+    grid-area: 3/2/4/3;
+    }
+}
+@media all and (min-width:200px) and (max-width:450px) {
+    #container{
+    grid-template-columns: auto  ;
+    grid-template-rows: 100px 150px 150px 150px 150px;
+    gap: 30px;
+    }
+.box1{
+    grid-area: 1/1/2/2;
+}
+.box2{
+    grid-area: 2/1/3/2;
+}
+.box3{
+    grid-area: 3/1/4/2;
+}
+.box4{
+    grid-area: 4/1/5/2;
+    }
+.box5{
+    grid-area: 5/1/6/2;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="box1"><h1>Navigation</h1></div>
+        <div class="box2">Box 1</div>
+        <div class="box3">Box 2</div>
+        <div class="box4">Box 3</div>
+        <div class="box5">Box 4</div>
+    </div>
+</body>
+</html>

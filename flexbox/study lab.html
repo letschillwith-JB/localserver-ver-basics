@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Lab</title>
+    <style>
+        #maindiv{
+            width: 80%;height: 600px;
+            margin: auto;
+        }
+        .box1{
+            width: 100%;
+            height: 50px;
+            border: 1px solid red;
+        }
+        .box1>div:nth-child(1){
+            height: 100%;width: 15%;background-color: rgba(89, 89, 215, 0.905);
+            color: white;margin-top: -19px;
+        }
+        .box1>div:nth-child(2){
+            width: 60%;height: auto;
+            display: flex;
+            color: black;
+            
+        }
+        div>h3{
+        padding: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="maindiv">
+        <div class="box1">
+            <div>
+               <h3>Studylab</h3> 
+            </div>
+            <div>
+                <p>Home</p>
+                <p>About</p>
+                <p>Courses</p>
+                <p>Instructor</p>
+                <p>Blog</p>
+                <p>Contact</p>
+            </div>
+        </div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
