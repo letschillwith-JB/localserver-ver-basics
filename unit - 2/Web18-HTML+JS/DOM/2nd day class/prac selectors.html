@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>Practise Selectors</title>
+    </head>
+    <body>
+        <h1>First H1</h1>
+        <h1>Second H1</h1>
+        <h3>First H3</h3>
+        <h3>Second H3</h3>
+        <h5>First H5</h5>
+        <h5>Second H5</h5>
+        <h5>Third H5</h5>
+        <div class="green">First DIV</div>
+        <div class="red">Second DIV</div>
+        <div class="blue">Third DIV</div>
+        <p class="green">First P</p>
+        <p class="red">Second P</p>
+        <p class="blue">Third P</p>
+        <hr/>
+        <button id="btn1">Change H1</button>
+        <button id="btn2">Change H3</button>
+        <button id="btn3">Change H5</button>
+        <button id="btn4">Change Green</button>
+        <button id="btn5">Change Red</button>
+        <button id="btn6">Change Blue</button>
+        <script>
+        </script>
+    </body>
+</html>
+
+<script>
+    document.querySelector("#btn1").addEventListener("click",fun1)
+    function fun1(){
+        document.querySelector("h1").style.color = "red"
+    }
+
+    document.querySelector("#btn2").addEventListener("click",fun2)
+    function fun2(){
+        var h3=document.querySelectorAll("h3")
+        h3[0].style.color = "green"
+        h3[1].style.color = "green"
+    }
+
+    document.querySelector("#btn3").addEventListener("click",fun3)
+    function fun3(){
+        var h5=document.querySelectorAll("h5")
+        h5[0].style.color = "blue"
+        h5[1].style.color = "blue"
+        h5[2].style.color = "blue"
+    }
+
+    document.querySelector("#btn4").addEventListener("click",fun4)
+    function fun4(){
+        var green=document.querySelectorAll(".green")
+        green[0].style.color = "green"
+        green[1].style.color = "green"
+        green[2].style.color = "green"
+    }
+
+    document.querySelector("#btn5").addEventListener("click",fun5)
+    function fun5(){
+        var red=document.querySelectorAll(".red")
+        red[0].style.color = "red"
+        red[1].style.color = "red"
+    }
+
+    document.querySelector("#btn6").addEventListener("click",fun6)
+    function fun6(){
+        var blue=document.querySelectorAll(".blue")
+        blue[0].style.color = "blue"
+        blue[1].style.color = "blue"
+    }
+</script>

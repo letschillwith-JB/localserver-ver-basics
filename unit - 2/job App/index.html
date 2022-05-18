@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <div id="links">
+      <div><a href="index.html">Home</a></div>
+      <div><a href="applied.html">Applied Jobs</a></div>
+      <div><a href="bookmark.html">Bookmarks</a></div>
+    </div>
+    <form action="" id="form">
+      <h2>Enter Your Application Details</h2>
+      <input placeholder="Enter Name" id="name" name="name" type="text" />
+      <input placeholder="Enter email" type="email" name="email" id="email" />
+      <select name="role" id="role">
+        <option value="FSD">FSD</option>
+        <option value="Backend">Backend</option>
+        <option value="Frontend">Frontend</option>
+      </select>
+      <input id="salary" type="number" placeholder="Enter expected salary in lakhs per annum "
+      />
+      <input id="submit" type="submit" name="submit" value="Submit" />
+    </form>
+  </body>
+  <script>
+    //you need to code here
+    var array = [JSON.parse(localStorage.getItem("joblist")) || [] ]
+    document.querySelector("form").addEventListener("submit",onefun)
+    function onefun(){
+      event.preventDefault();
+      // var name = document.querySelector("#name").value;
+      //  localStorage.setItem("jobList",JSON.stringify(name));
+
+      // var email = document.querySelector("#email").value
+      // localStorage.setItem("jobList1",JSON.stringify(email))
+
+      // var role = document.querySelector("#role").value
+      // localStorage.setItem("jobList2",JSON.stringify(role))
+
+      // var salary = document.querySelector("#salary").value
+      // localStorage.setItem("jobList3",JSON.stringify(salary))
+
+      // console.log(JSON.parse(localStorage.getItem("jobList")))
+      // console.log(JSON.parse(localStorage.getItem("jobList1")))
+      // console.log(JSON.parse(localStorage.getItem("jobList2")))
+      // console.log(JSON.parse(localStorage.getItem("jobList3")))
+      // ,"jobList1","jobList2","jobList3")))
+
+      var objdata = {      //--->>so inspite of doing that way i had created an obj 
+        personName:document.querySelector("#name").value,
+        personEmail:document.querySelector("#email").value,
+        personRole:document.querySelector("#role").value,
+        personSalary:document.querySelector("#salary").value
+      }
+
+      array.push(objdata)
+
+      localStorage.setItem("jobList",JSON.stringify(array))
+      // console.log(JSON.parse(localStorage.getItem("jobList")))
+      window.location.href="applied.html"
+      // var arr = JSON.parse(localStorage.getItem("jobList"))
+       console.log(arr)
+    }
+    
+  </script>
+</html>

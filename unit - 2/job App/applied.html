@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Database</title>
+    <link rel="stylesheet" href="commonStyles.css" />
+  </head>
+
+  <body>
+    <div id="links">
+      <div><a href="index.html">Home</a></div>
+      <div><a href="applied.html">Applied Jobs</a></div>
+      <div><a href="bookmark.html">Bookmarks</a></div>
+    </div>
+
+    <main>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Job applied</th>
+            <th>Salary expected</th>
+            <th>Add to bookmark</th>
+          </tr>
+        </thead>
+        <tbody id="body">
+          <!-- Append your output to tbody -->
+        </tbody>
+      </table>
+    </main>
+  </body>
+
+
+
+
+
+
+  <script>
+    //you need to code here
+    var applied = [];
+    var book = JSON.parse(localStorage.getItem("bookmarks")) || [];
+    var arr = JSON.parse(localStorage.getItem("jobList"))
+    applied.push(arr)
+
+    arr.forEach(function(elem){     //earlier i pushed arr in applied(array)  
+    var tr = document.createElement("tr")
+    var td1 = document.createElement("td")
+    td1.innerText = elem.personName
+
+    var td2 = document.createElement("td")
+    td2.innerText = elem.personEmail
+
+    var td3 = document.createElement("td")
+    td3.innerText = elem.personRole
+
+    var td4 = document.createElement("td")
+    td4.innerText = elem.personSalary
+
+    var td5 = document.createElement("button")
+    td5.innerText = "Bookmark"
+    tr.append(td1,td2,td3,td4,td5)
+    document.querySelector("#body").append(tr)
+
+    td5.addEventListener("click",myfun)
+      function myfun(){
+        // localStorage.setItem("bookmarks",JSON.stringify(arr.personName))
+        // console.log(JSON.parse(localStorage.getItem("bookmarks")));
+        
+        //----->>>so creating an obj so on landing page easy to getItems
+        var objdata = {
+          personName:arr.personName,
+          personEmail:arr.personEmail,
+          personRole:arr.personRole
+        }
+        book.push(objdata)
+         localStorage.setItem("bookmarks",JSON.stringify(book))
+         console.log(book); 
+
+         window.location.href="bookmark.html"
+      } 
+
+    })
+    
+    
+
+
+
+   
+  </script>
+</html>

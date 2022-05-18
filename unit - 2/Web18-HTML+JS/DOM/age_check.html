@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>age check</title>
+</head>
+<body>
+    <select>
+        <option value="more than 18">Below 18</option>
+        <option value="less than 18">Above 18</option>
+        <option value="18">18</option>
+    </select>
+    <button  onclick="B18()">Below 18</button>
+    <button onclick="A18()">Above 18</button>
+    <button onclick="at18()">18</button> 
+    <p id="b18"></p>
+    <p id="a18"></p>
+    <p id="18"></p>
+</body>
+</html>
+<script>
+function B18(){
+document.getElementById("b18").innerText = "You are not eligible to drive in india"
+}
+function A18(){
+    document.getElementById("a18").innerText = "You are eligible to drive in india"
+}
+function at18(){
+    document.getElementById("18").innerText = "You are just now become eligible to drive in india"
+}
+</script>

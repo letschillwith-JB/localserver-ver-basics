@@ -23,6 +23,7 @@
             margin: auto;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;;
             margin-top: 20px;
+             text-align: center;
              ;
         }
         .div{
@@ -74,7 +75,7 @@
     <div class="maindiv" >
         <div></div>
         <div class="div">
-            <div>1</div>
+            <div id="div-1">1</div>
             <div>2</div>
             <div>3</div>
             <div id="exept-div">+</div>
@@ -95,3 +96,10 @@
     </div>
 </body>
 </html>
+<script>
+    var display = document.querySelector(".maindiv>div:nth-child(1)")
+    document.querySelector("#div-1").addEventListener("click",func1)
+    function func1(){
+        display = document.querySelector("#div-1").value
+    }
+</script>

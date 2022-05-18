@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend</title>
+    <style>
+        div{
+            width: auto;height: 300px;margin: auto;box-shadow: 1px 1px 2px 1px;
+        }
+    </style>
+</head>
+<body>
+    <h1>I M Frontend</h1>
+    <div>
+        <h1 id="name"></h1>
+        <h5 id="h5"></h5>
+    </div>
+</body>
+</html>
+<script>
+    document.querySelector("#name").innerText = name
+    var name = JSON.parse(localStorage.getItem("names"))
+
+    document.querySelector("#h5").innerText = role
+    var role = JSON.parse(localStorage.getItem("role"))
+    console.log(name,role)
+</script>

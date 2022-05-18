@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            height: auto;width: 100px;background-color: teal;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="container">I am div</div> -->
+    <div class="maindiv">
+        
+    </div>
+    
+</body>
+</html>
+<script>
+    //-->setAttribute("id/class","....")--can connect style given with JS
+    //-->see how to add img inside the div , inline 31 setAttribute is bcz in img tag src is the attribute to image  
+    var box = document.createElement("div")
+    box.innerText="I am div"
+    box.setAttribute("id","container");
+    document.querySelector("body").append(box)
+
+    var image = document.createElement("img")
+    image.setAttribute("src","https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png")
+    box.append(image)
+
+
+</script>

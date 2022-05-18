@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buttons </title>
+</head>
+<style>
+    #container{
+        width: 100px;height: 40px;margin-right: 5px;display: flex;
+        ;;justify-content: center;align-items: center;border-radius: 5px;
+    }
+</style>
+<body>
+    <!-- <div id="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div> -->
+<div style="display: flex;">
+
+    </div>
+</body>
+</html>
+<script>
+    var obj = [
+        {name:"Primary", color:"white",bgr:"blue"},
+        {name:"Secondary", color:"white",bgr:"grey"},
+        {name:"Success", color:"white",bgr:"green"},
+        {name:"Danger", color:"white",bgr:"pink"},
+        {name:"Warning", color:"black",bgr:"yellow"},
+        {name:"Info", color:"white",bgr:"teal"},
+        {name:"Light", color:"black",bgr:"white"},
+        {name:"Dark", color:"white",bgr:"black"},
+        {name:"Link", color:"blue",bgr:"white"},
+    ]
+    for(i=0;i<obj.length;i++){
+        var di = document.createElement("div")
+    di.innerText=obj[i].name
+    di.style.color=obj[i].color
+    di.style.backgroundColor = obj[i].bgr
+    document.querySelector("div").append(di)
+    console.log(di)
+    di.setAttribute("id","container")
+    }
+    
+</script>

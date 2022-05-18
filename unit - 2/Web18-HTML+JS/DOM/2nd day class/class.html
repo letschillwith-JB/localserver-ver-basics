@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="head">I am H1</h1>
+    <p>I am Para </p>
+    <p>I am para 2</p>
+    <div id="box">I am Div</div>
+</body>
+</html>
+<script>
+    var div = document.getElementById("box")
+    console.log(div)
+    var heading = document.getElementsByClassName("head")
+    console.log(heading)
+    
+    //querySelector
+    //class -.
+    //id - #
+    //tag - tagName
+
+    //id selector
+    var divNew = document.querySelector("#box")
+    console.log(divNew)
+    var p = document.querySelectorAll("p")
+    console.log(p)
+
+    //querySelector is returning only 1st items
+    //so use querySelectorAll it will return all the items in an Array
+    //querySelector vs querySelectorAll
+    //querySelector selects only 1st query , querySelectorAll selects all the items of that tag/class/id
+    //we can also us combinators with these two querySelector & querySelectorAll 
+    //combinators cannot use with getElementBtId or other
+    var combinator = document.querySelectorAll("body p")
+    console.log(combinator)
+</script>

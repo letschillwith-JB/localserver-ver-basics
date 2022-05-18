@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .maindiv{
+            width: 100%;height: auto;
+            display: grid;gap: 20px;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(1,auto);
+        }
+        .img{
+            width: 100%;height: 60%
+        }
+        .text{
+            text-align: center;margin-top:0px;
+        }
+        .text1{
+            margin-top: -10px;text-align: center;
+        }
+        .logo{
+            width: 50%;margin-left: 70px;
+            margin-top :-10px; 
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 class="text"></h1>
+    <div class="maindiv"></div>
+</body>
+</html>
+<script>
+    var hh = document.querySelector("h1").innerText = "Stretegic Investors"
+    
+    var obj = [
+        {img1:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png",name:"Kunal Shah",position:"Founder",img2:"https://masai-website-images.s3.ap-south-1.amazonaws.com/cred_0a47d7b4f8.png"},
+         {img1:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",name:"Vijay Shekhar Sharma",position:"Founder & CEO",img2:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"},
+        {img1:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Rectangle_427_637d69bb57.png",name:"Kunal Shah",position:"Founder",img2:"https://masai-website-images.s3.ap-south-1.amazonaws.com/cred_0a47d7b4f8.png"},
+         {img1:"https://masai-website-images.s3.ap-south-1.amazonaws.com/Vijay_Shekhar_Sharma_Paytm_96f52579b8.jpg",name:"Vijay Shekhar Sharma",position:"Founder & CEO",img2:"https://masai-website-images.s3.ap-south-1.amazonaws.com/paytm_rect_06df45a24f.svg"}
+    ]
+    obj.forEach(function(elem){
+    var js = document.createElement("div")
+    document.querySelector(".maindiv").append(js)
+
+    var image = document.createElement("img")
+    image.setAttribute("src",elem.img1)
+    image.setAttribute("class","img")
+    js.append(image)
+
+    var names = document.createElement("h2")
+    names.innerText = elem.name
+    names.setAttribute("class","text")
+    js.append(names)
+    
+    var positions = document.createElement("p")
+    positions.innerText = elem.position
+    positions.setAttribute("class","text")
+    positions.setAttribute("class","text1")
+    js.append(positions)
+
+    var logo = document.createElement("img")
+    logo.setAttribute("src",elem.img2)
+    logo.setAttribute("class","logo")
+    js.append(logo)
+    
+    console.log(js)
+    
+})
+</script>

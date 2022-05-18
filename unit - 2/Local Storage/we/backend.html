@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend</title>
+</head>
+<body>
+    <h1>I M Backend</h1>
+    <form>
+        <input type="text" id="name" name="name" placeholder="name">
+        <input type="text" name="" id="image" placeholder="imgURL">
+        <input type="text" name="image" id="logo" placeholder="companyLogo">
+        <input type="text" name="text" id="role" placeholder="role">
+        <input type="submit" name="" id="submit">
+    </form>
+</body>
+</html>
+<script>
+    document.querySelector("form").addEventListener("submit",myfun)
+    function myfun(){
+        event.preventDefault()
+    var name = document.querySelector("#name").value
+
+    var img = document.querySelector("#image").value
+    var logo = document.querySelector("#logo").value
+    var role = document.querySelector("#role").value
+    var roles = localStorage.setItem("role",JSON.stringify(role))
+
+    
+    var locals = localStorage.setItem("names",JSON.stringify(name))
+    var getting = JSON.parse(localStorage.getItem("names"))
+    // console.log(getting)
+
+    window.location.href="frontend.html"
+    }
+    
+</script>

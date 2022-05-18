@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throw a dice</title>
+    <style>
+        #winner{
+            text-align: center;;
+            width: 50%;height: 80px;
+            border: 1px solid grey;
+            border-radius: 10px;box-shadow: 0px 0px 3px 0px;
+            padding-top: 50px;
+            margin: auto;margin-bottom: 50px;
+            font-size:xx-large;
+            background-color: aqua;
+        }
+        #maindiv{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-evenly;
+            
+        }
+        #member-1{
+            text-align: center;
+            background-color: aliceblue;
+            font-size: 150px;
+            border: 1px solid black;
+            border-radius: 10px;
+            height: 200px;width: 200px;
+        }
+        #member-2{
+            
+            text-align: center;
+            background-color: aliceblue;
+            font-size: 150px;
+            border: 1px solid black;
+            border-radius: 10px;
+            height: 200px;width: 200px;
+        }
+        #member-3{
+            
+            text-align: center;
+            background-color: aliceblue;
+            font-size: 150px;
+            border: 1px solid black;
+            border-radius: 10px;
+            height: 200px;width: 200px;
+        }
+        #roll{
+            margin: 40px;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="winner"></div>
+<div id="maindiv">
+    <div id="member-1"></div>
+    <div id="member-2"></div>
+    <div id="member-3"></div>
+</div>
+    <button id="roll">ROLL THE DICE</button>
+</body>
+</html>
+
+<script>
+    document.querySelector("#roll").addEventListener("click",func)
+    function func(){
+        var mem1 = document.querySelector("#member-1").innerText = fun1()
+        var mem2 = document.querySelector("#member-2").innerText = fun1()
+        var mem3 = document.querySelector("#member-3").innerText = fun1()
+         function fun1(){
+             return Math.floor(Math.random()*6)+1
+             }
+        document.getElementById("winner").innerText = fun2()
+        function fun2(){
+            if(mem1 > mem2 && mem1>mem3){
+                return "member-1 is winner"
+                
+            }
+            else if(mem2 > mem1 && mem2 > mem3){
+                return "Member-2 is winner"
+            }
+            else if(mem3 > mem1 && mem3 > mem2){
+                return "Member-3 is winner"
+            }
+            else if(mem1 === mem2 || mem1===mem3 || mem2===mem3){
+                return "Draw"
+            }   
+        }  
+        
+        if(mem1>mem2 && mem1>mem3){
+            document.querySelector("#member-1").style.color =  "green"
+        }
+        else if(mem2>mem1 && mem2>mem3){
+            document.querySelector("#member-2").style.color = "green"
+        }
+        else if(mem3>mem1 && mem3>mem2){
+            document.querySelector("#member-3").style.color = "green"
+        } 
+        else if(mem1>mem2||mem1>mem3 && mem1<mem2||mem1<mem3){
+            document.querySelector("#member-1").style.color =  "orange"
+        }
+        else if(mem2>mem1||mem2>mem3 && mem2<mem1||mem2<mem3){
+            document.querySelector("#member-2").style.color =  "orange"
+        }
+        else if(mem3>mem1||mem3>mem2 && mem3<mem2||mem3<mem1){
+            document.querySelector("#member-3").style.color =  "orange"
+        }
+        
+        else if(mem1<mem2 && mem1<mem3){
+            document.querySelector("#member-1").style.color = "red"
+        }
+    
+    }   
+    
+    
+
+
+    
+</script>

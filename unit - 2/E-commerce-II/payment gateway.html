@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to payment gateway</title>
+</head>
+<body>
+    <form action="">
+        <input id="password" type="text" value="" placeholder="password" >
+        <input type="submit" id="submit">
+    </form>
+    <button onclick="func()">Daba Mereko</button>
+    <a href="www.google.com" style="text-decoration: none;color: white;background-color: black;">hey!</a>
+</body>
+</html>
+
+<script>
+    var password = document.querySelector("#password").value
+    document.querySelector("form").addEventListener("submit",func1)
+    function func1(){
+        event.preventDefault();
+        if(document.querySelector("#password").value !== "a"){
+        alert("Incorrect Password");
+    }
+    else if(document.querySelector("#password").value === "a"){
+        alert("Yoo your password is correct") 
+        window.location.href="www.youtube.com"   
+        
+    }
+}
+    function func(){
+        alert("Hello JB")
+    }
+    
+</script>
